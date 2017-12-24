@@ -322,6 +322,7 @@ public:
   static const std::string SETTING_AUDIOOUTPUT_AC3TRANSCODE;
   static const std::string SETTING_AUDIOOUTPUT_EAC3PASSTHROUGH;
   static const std::string SETTING_AUDIOOUTPUT_DTSPASSTHROUGH;
+  static const std::string SETTING_AUDIOOUTPUT_DTSTRANSCODE;
   static const std::string SETTING_AUDIOOUTPUT_TRUEHDPASSTHROUGH;
   static const std::string SETTING_AUDIOOUTPUT_DTSHDPASSTHROUGH;
   static const std::string SETTING_AUDIOOUTPUT_VOLUMESTEPS;

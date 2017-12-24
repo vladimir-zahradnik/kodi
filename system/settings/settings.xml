@@ -2710,6 +2710,7 @@
               <and>
                 <condition setting="audiooutput.passthrough" operator="is">true</condition>
                 <condition setting="audiooutput.ac3passthrough" operator="is">true</condition>
+                <condition setting="audiooutput.dtstranscode" operator="is">false</condition>
               </and>
             </dependency>
             <dependency type="visible">
@@ -2746,6 +2747,26 @@
               </and>
             </dependency>
             <dependency type="enable" setting="audiooutput.passthrough" operator="is">true</dependency>
+          </dependencies>
+          <control type="toggle" />
+        </setting>
+        <setting id="audiooutput.dtstranscode" type="boolean" parent="audiooutput.dtspassthrough" label="684" help="36429">
+          <level>2</level>
+          <default>false</default>
+          <dependencies>
+            <dependency type="enable">
+              <and>
+                <condition setting="audiooutput.passthrough" operator="is">true</condition>
+                <condition setting="audiooutput.dtspassthrough" operator="is">true</condition>
+                <condition setting="audiooutput.ac3transcode" operator="is">false</condition>
+              </and>
+            </dependency>
+            <dependency type="visible">
+              <and>
+                <condition on="property" name="aesettingvisible" setting="audiooutput.config">audiooutput.dtstranscode</condition>
+                <condition on="property" name="aesettingvisible" setting="audiooutput.channels">audiooutput.dtstranscode</condition>
+              </and>
+            </dependency>
           </dependencies>
           <control type="toggle" />
         </setting>
